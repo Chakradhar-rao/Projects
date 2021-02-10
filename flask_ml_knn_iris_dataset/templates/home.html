@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Iris Prediction</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <style>
+body {
+            background-image: url('static/nature.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+      }
+</style>
+
+
+	<div class="container">
+
+		<center><h1> Iris Data Prediction</h1></center>
+    <style>
+div {
+  
+  padding: 0px 100px 0px 250px;
+  
+}
+</style>
+<form class="form-horizontal" action="{{url_for('home')}}" method="POST">
+
+ <div class="form-group">
+    <label class="control-label col-sm-2" for="SL">Sepal Length:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="SL" name="SL"placeholder="Enter sepal length in cm">
+    </div>
+  </div>
+
+
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="SL">Sepal Width:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="SW" name="SW"placeholder="Enter sepal width in cm">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="SL">Petal Length:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="PL" name="PL"placeholder="Enter petal length in cm">
+    </div>
+  </div>
+
+
+
+<div class="form-group">
+    <label class="control-label col-sm-2" for="SL">Petal Width:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="PW" name="PW"placeholder="Enter petal width in cm">
+    </div>
+  </div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+
+
+</form>
+
+<diV class="container">
+	<center><h1>{{ test }}</h1></center>
+ 
+
+</diV>
+{% if a == 'Iris-setosa'%}
+ <center><img src = 'static/setosa.jpg' width="250" height="250"></center>
+
+ {% elif a == 'Iris-virginica'%}
+   <center><img src = 'static/virginica.jpg' width="250" height="250"></center>
+
+  {% elif a == 'Iris-versicolor'%}
+   <center><img src = 'static/versicolor.jpg' width="250" height="250"></center>
+  
+  
+{%endif%} 
+
+
+	</div>
+
+</body>
+</html>
